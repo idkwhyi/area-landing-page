@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 @theme {
+    --breakpoint-sm: 640px;
+    --breakpoint-md: 768px;
     --color-button-primary: rgb(76, 91, 31);
     --color-button-primary-hover: rgb(145, 156, 123);
     --color-button-secondary: rgb(225, 236, 202);
@@ -23,4 +25,17 @@
 @font-face {
     font-family: 'Crimson_Text_bold';
     src: url('/fonts/Crimson_Text/Crimson_Text-Bold.ttf')
+}
+
+.dm-sans {
+    font-family: 'DM_Sans', sans-serif;
+}
+
+.crimson-regular {
+    font-family: 'Crimson_Text_regular', serif;
+    font-weight: 400;
+}
+
+.crimson-bold {
+    font-family: 'Crimson_Text_bold', serif;
 }

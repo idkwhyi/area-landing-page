@@ -10,3 +10,17 @@
     --color-thirdary-text: rgb(146, 146, 146);
     --color-icon-primary: rgb(150, 150, 150);   
 }
+@font-face {
+    font-family: 'DM_Sans';
+    src: url('/fonts/DM_Sans/DM_Sans-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Crimson_Text_regular';
+    src: url('/fonts/Crimson_Text/Crimson_Text-Regular.ttf')
+}
+
+@font-face {
+    font-family: 'Crimson_Text_bold';
+    src: url('/fonts/Crimson_Text/Crimson_Text-Bold.ttf')
+}

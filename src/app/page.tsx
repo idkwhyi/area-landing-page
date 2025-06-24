@@ -1,5 +1,7 @@
+import Benefits from '@/components/Benefits'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
+import TrustedBy from '@/components/TrustedBy'
 
 export default function Home() {
     return (
@@ -7,6 +9,8 @@ export default function Home() {
             <Navbar />
             <br />
             <Hero />
+            <TrustedBy />
+            <Benefits />
 
             <div className="w-40 h-40 bg-red-200">TEST</div>
             <div className="w-40 h-40 bg-red-200">TEST</div>

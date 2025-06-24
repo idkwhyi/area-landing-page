@@ -45,7 +45,7 @@ const Hero = () => {
                 </div>
 
                 {/* Background Div */}
-                <div className="z-0 absolute inset-x-0 bottom-0 h-[80%] md:min-h-[65%] w-full bg-matcha rounded-4xl"></div>
+                <div className="z-0 absolute inset-x-0 bottom-0 h-[60%] md:min-h-[65%] w-full bg-matcha rounded-4xl"></div>
             </div>
         </div>
     )

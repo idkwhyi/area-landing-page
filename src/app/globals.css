@@ -1,4 +1,4 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
     --breakpoint-sm: 640px;
@@ -10,21 +10,21 @@
     --color-primary-text: rgb(0, 0, 0);
     --color-secondary-text: rgb(139, 139, 139);
     --color-thirdary-text: rgb(146, 146, 146);
-    --color-icon-primary: rgb(150, 150, 150);   
+    --color-icon-primary: rgb(150, 150, 150);
 }
 @font-face {
     font-family: 'DM_Sans';
-    src: url('/fonts/DM_Sans/DM_Sans-Regular.ttf');
+    src: url('/fonts/DM_Sans/DMSans.ttf');
 }
 
 @font-face {
     font-family: 'Crimson_Text_regular';
-    src: url('/fonts/Crimson_Text/Crimson_Text-Regular.ttf')
+    src: url('/fonts/Crimson_Text/CrimsonText-Regular.ttf');
 }
 
 @font-face {
     font-family: 'Crimson_Text_bold';
-    src: url('/fonts/Crimson_Text/Crimson_Text-Bold.ttf')
+    src: url('/fonts/Crimson_Text/CrimsonText-Bold.ttf');
 }
 
 .dm-sans {
@@ -38,4 +38,5 @@
 
 .crimson-bold {
     font-family: 'Crimson_Text_bold', serif;
+    font-weight: 700;
 }

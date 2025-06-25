@@ -2,6 +2,7 @@ import Benefits from '@/components/Benefits'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
 import TrustedBy from '@/components/TrustedBy'
+import Words from '@/components/Words'
 
 export default function Home() {
     return (
@@ -11,6 +12,7 @@ export default function Home() {
             <Hero />
             <TrustedBy />
             <Benefits />
+            <Words />
 
             <div className="w-40 h-40 bg-red-200">TEST</div>
             <div className="w-40 h-40 bg-red-200">TEST</div>

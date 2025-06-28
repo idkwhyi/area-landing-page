@@ -38,7 +38,7 @@ const MapYourSuccess = () => {
 
     return (
         <div className="w-full flex items-center justify-center flex-col gap-24 pb-12">
-            <div className="min-w-[95%] h-fit flex flex-col md:flex-row gap-8 py-20 items-center md:items-center justify-center md:justify-between border-b border-line">
+            <div id="how-to" className="min-w-[95%] h-fit flex flex-col md:flex-row gap-8 py-20 items-center md:items-center justify-center md:justify-between border-b border-line">
                 <h2 className="w-fit crimson-regular text-4xl sm:text-5xl md:text-6xl text-center md:text-left mys-animate-on-scroll-fade animate-fade-in-initial">
                     Map Your Success
                 </h2>

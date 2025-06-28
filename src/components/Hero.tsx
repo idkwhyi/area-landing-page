@@ -41,7 +41,7 @@ const Hero = () => {
     }, [])
 
     return (
-        <div className="w-full h-[75vh] md:h-[90vh] py-4 flex flex-col items-start justify-center sm:gap-5 gap-12 px-5 md:px-10">
+        <div className="w-full h-[75vh] md:h-[90vh] py-4 flex flex-col items-start justify-center sm:gap-5 gap-12 pt-16 px-5 md:px-10">
             <h1
                 ref={textRef}
                 style={{ opacity: 0, transform: 'translateY(40px)' }}

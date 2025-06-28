@@ -71,6 +71,7 @@ const Specification = () => {
                             sizes="(max-width: 768px) 100vw, 50vw"
                             className="object-cover rounded-lg md:rounded-4xl"
                             priority={false}
+                            loading='lazy'
                         />
                     </div>
 

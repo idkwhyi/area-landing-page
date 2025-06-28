@@ -1,32 +1,171 @@
+'use client'
 import Link from 'next/link'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 const Navbar = () => {
-    return (
-        <div className="w-full flex items-center justify-between px-10 py-5 relative">
-            <Link href="/" className="text-black dm-sans font-medium text-3xl">Area</Link>
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [showMobileBanner, setShowMobileBanner] = useState(true)
+    const [lastScrollY, setLastScrollY] = useState(0)
 
-            <div className="fixed left-1/2 transform -translate-x-1/2 w-fit flex items-center z-50 bg-white/20 backdrop-blur-2xl px-6 py-3 rounded-full">
-                <ul className="flex items-center justify-center gap-6">
-                    <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
-                        Benefits
-                    </li>
-                    <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
-                        Specifications
-                    </li>
-                    <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
-                        How-to
-                    </li>
-                    <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
-                        Contact Us
-                    </li>
-                </ul>
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollY = window.scrollY
+
+            // Show banner when user stops scrolling or scrolls up
+            if (currentScrollY < lastScrollY || Math.abs(currentScrollY - lastScrollY) < 5) {
+                setShowMobileBanner(true)
+            } else {
+                setShowMobileBanner(false)
+            }
+
+            setLastScrollY(currentScrollY)
+        }
+
+        let scrollTimeout: string | number | NodeJS.Timeout | undefined
+        const debouncedScroll = () => {
+            clearTimeout(scrollTimeout)
+            handleScroll()
+            scrollTimeout = setTimeout(() => {
+                setShowMobileBanner(true)
+            }, 150)
+        }
+
+        window.addEventListener('scroll', debouncedScroll)
+        return () => {
+            window.removeEventListener('scroll', debouncedScroll)
+            clearTimeout(scrollTimeout)
+        }
+    }, [lastScrollY])
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen)
+    }
+
+    const menuItems = ['Benefits', 'Specifications', 'How-to', 'Contact Us']
+
+    return (
+        <>
+            {/* Desktop Version - unchanged */}
+            <div className="hidden md:flex w-full items-center justify-between px-10 py-5 relative">
+                <Link href="/" className="text-black dm-sans font-medium text-3xl">
+                    Area
+                </Link>
+
+                <div className="fixed left-1/2 transform -translate-x-1/2 w-fit flex items-center z-50 bg-white/20 backdrop-blur-2xl px-6 py-3 rounded-full">
+                    <ul className="flex items-center justify-center gap-6">
+                        <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
+                            Benefits
+                        </li>
+                        <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
+                            Specifications
+                        </li>
+                        <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
+                            How-to
+                        </li>
+                        <li className="font-bold text-sm text-black cursor-pointer hover:text-gray-700 transition-colors">
+                            Contact Us
+                        </li>
+                    </ul>
+                </div>
+
+                <button className="bg-button-primary text-white px-6 py-4 rounded-full font-bold text-sm hover:bg-button-primary-hover transition-colors ease-in-out">
+                    Learn More
+                </button>
             </div>
 
-            <button className="bg-button-primary text-white px-6 py-4 rounded-full font-bold text-sm hover:bg-button-primary-hover transition-colors ease-in-out">
-                Learn More
-            </button>
-        </div>
+            {/* Mobile Version */}
+            <div className="md:hidden">
+                {/* Mobile Banner */}
+                <div
+                    className={`fixed top-0 left-0 right-0 z-50 bg-white  transition-transform duration-300 ${
+                        showMobileBanner || isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+                    } ${isMenuOpen ? '' : 'shadow-sm rounded-br-2xl'}`}
+                >
+                    <div className="flex items-center justify-between px-6 py-4">
+                        <Link href="/" className="text-black dm-sans font-medium text-2xl">
+                            Area
+                        </Link>
+
+                        <button
+                            onClick={toggleMenu}
+                            className="w-8 h-8 flex items-center justify-center relative z-60"
+                            aria-label="Toggle menu"
+                        >
+                            <span
+                                className={`absolute left-1/2 w-6 h-0.5 bg-black transition-all duration-300 transform -translate-x-1/2 ${
+                                    isMenuOpen ? 'rotate-45 top-1/2' : 'top-2'
+                                }`}
+                            ></span>
+                            <span
+                                className={`absolute left-1/2 w-6 h-0.5 bg-black transition-all duration-300 transform -translate-x-1/2 ${
+                                    isMenuOpen ? 'opacity-0' : 'opacity-100 top-1/2'
+                                }`}
+                            ></span>
+                            <span
+                                className={`absolute left-1/2 w-6 h-0.5 bg-black transition-all duration-300 transform -translate-x-1/2 ${
+                                    isMenuOpen ? '-rotate-45 top-1/2' : 'top-[2px]'
+                                }`}
+                            ></span>
+                        </button>
+                    </div>
+                </div>
+
+                {/* Fullscreen Mobile Menu */}
+                <div
+                    className={`fixed inset-0 z-40 bg-white transition-opacity duration-300 ${
+                        isMenuOpen
+                            ? 'opacity-100 pointer-events-auto'
+                            : 'opacity-0 pointer-events-none'
+                    }`}
+                >
+                    <div className="pt-20 px-6">
+                        <nav>
+                            <ul className="">
+                                {menuItems.map((item, index) => (
+                                    <li
+                                        key={item}
+                                        className={`transform transition-all duration-500 border-t border-line py-4 ${
+                                            isMenuOpen
+                                                ? 'translate-y-0 opacity-100'
+                                                : '-translate-y-4 opacity-0'
+                                        }`}
+                                        style={{
+                                            transitionDelay: isMenuOpen
+                                                ? `${index * 100}ms`
+                                                : '0ms',
+                                        }}
+                                    >
+                                        <a
+                                            href="#"
+                                            className="block text-sm font-bold  text-black py-3 hover:text-secondary-text transition-colors"
+                                            onClick={toggleMenu}
+                                        >
+                                            {item}
+                                        </a>
+                                    </li>
+                                ))}
+                                <li
+                                    className={`transform transition-all duration-500 pt-6 ${
+                                        isMenuOpen
+                                            ? 'translate-y-0 opacity-100'
+                                            : '-translate-y-4 opacity-0'
+                                    }`}
+                                    style={{
+                                        transitionDelay: isMenuOpen
+                                            ? `${menuItems.length * 100}ms`
+                                            : '0ms',
+                                    }}
+                                >
+                                    <button className="w-fit bg-button-primary hover:bg-button-primary-hover text-white px-6 py-3 rounded-full dm-sans font-bold text-sm">
+                                        Learn More
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </>
     )
 }
 

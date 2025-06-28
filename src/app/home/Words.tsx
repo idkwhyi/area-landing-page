@@ -11,7 +11,7 @@ const Words = () => {
             {/* Existing list section */}
             <ul className="w-[95%] h-fit flex items-center justify-between flex-col md:flex-row gap-12 md:gap-0">
                 <li className={list_style}>
-                    <Image src={'/images/cable.png'} alt="insight image" width={30} height={30} />
+                    <Image loading='lazy' src={'/images/cable.png'} alt="insight image" width={30} height={30} />
                     <p className={p_title}>Amplify Insight</p>
                     <p className={p_class}>
                         Unlock data-driven decisions with comprehensive analytics, revealing key
@@ -19,7 +19,7 @@ const Words = () => {
                     </p>
                 </li>
                 <li className={list_style}>
-                    <Image src={'/images/globe.png'} alt="global image" width={30} height={30} />
+                    <Image loading='lazy' src={'/images/globe.png'} alt="global image" width={30} height={30} />
                     <p className={p_title}>Control Your Global Presence</p>
                     <p className={p_class}>
                         Manage and track satellite offices, ensuring consistent performance and
@@ -32,6 +32,7 @@ const Words = () => {
                         alt="language barrier image"
                         width={30}
                         height={30}
+                        loading='lazy'
                     />
                     <p className={p_title}>Remove Language Barriers</p>
                     <p className={p_class}>
@@ -40,7 +41,7 @@ const Words = () => {
                     </p>
                 </li>
                 <li className={list_style}>
-                    <Image src={'/images/globe.png'} alt="growth image" width={30} height={30} />
+                    <Image loading='lazy' src={'/images/globe.png'} alt="growth image" width={30} height={30} />
                     <p className={p_title}>Visualize Growth</p>
                     <p className={p_class}>
                         Generate precise, visually compelling reports that illustrate your growth
@@ -58,6 +59,7 @@ const Words = () => {
                     sizes="(max-width: 768px) 95vw, 95vw"
                     className="w-full h-[400px] sm:h-[500px] md:h-auto object-cover rounded-lg md:rounded-4xl"
                     priority={false}
+                    loading='lazy'
                 />
             </div>
         </div>

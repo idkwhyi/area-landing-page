@@ -1,6 +1,9 @@
 import Benefits from '@/components/Benefits'
+import Connect from '@/components/Connect'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Navbar from '@/components/Navbar'
+import Specification from '@/components/Specification'
 import TrustedBy from '@/components/TrustedBy'
 import Words from '@/components/Words'
 
@@ -13,14 +16,11 @@ export default function Home() {
             <TrustedBy />
             <Benefits />
             <Words />
+            <Specification />
+            <Connect />
+            <Footer />
 
-            <div className="w-40 h-40 bg-red-200">TEST</div>
-            <div className="w-40 h-40 bg-red-200">TEST</div>
-            <div className="w-40 h-40 bg-red-200">TEST</div>
-            <div className="w-40 h-40 bg-red-200">TEST</div>
-            <div className="w-40 h-40 bg-red-200">TEST</div>
-            <div className="w-40 h-40 bg-red-200">TEST</div>
-            <div className="w-40 h-40 bg-red-200">TEST</div>
+        
         </div>
     )
 }

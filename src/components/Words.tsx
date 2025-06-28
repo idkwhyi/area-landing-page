@@ -2,13 +2,13 @@ import React from 'react'
 import Image from 'next/image'
 
 const Words = () => {
-    const list_style = 'w-[20%] h-fit flex flex-col items-start justify-center gap-4'
+    const list_style = 'w-[95%] md:w-[20%] h-fit flex flex-col items-start justify-center gap-4'
     const p_title = 'crimson-regular text-lg'
     const p_class = 'w-full dm-sans text-secondary-text'
 
     return (
         <div className="w-full h-fit flex items-center justify-center py-10 gap-12 ">
-            <ul className="w-[85%] h-fit flex items-center justify-between flex-wrap ">
+            <ul className="w-full md:w-[95%] h-fit flex items-center justify-between flex-col md:flex-row gap-12 md:gap-0">
                 <li className={list_style}>
                     <Image src={'/images/cable.png'} alt="insight image" width={30} height={30} />
                     <p className={p_title}>Amplify Insight</p>

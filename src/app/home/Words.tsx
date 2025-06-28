@@ -9,7 +9,7 @@ const Words = () => {
     return (
         <div className="w-full h-fit flex flex-col items-center justify-center py-10 gap-12">
             {/* Existing list section */}
-            <ul className="w-full md:w-[95%] h-fit flex items-center justify-between flex-col md:flex-row gap-12 md:gap-0">
+            <ul className="w-[95%] h-fit flex items-center justify-between flex-col md:flex-row gap-12 md:gap-0">
                 <li className={list_style}>
                     <Image src={'/images/cable.png'} alt="insight image" width={30} height={30} />
                     <p className={p_title}>Amplify Insight</p>
@@ -49,13 +49,14 @@ const Words = () => {
                 </li>
             </ul>
 
-            <div className="w-full md:w-[95%] mt-8">
+            <div className="w-[95%] mt-8">
                 <Image
                     src="/images/mountain.png"
-                    alt="Mountatin image"
+                    alt="Mountain image"
                     width={1200}
                     height={600}
-                    className="w-full h-auto object-cover rounded-4xl"
+                    sizes="(max-width: 768px) 95vw, 95vw"
+                    className="w-full h-[400px] sm:h-[500px] md:h-auto object-cover rounded-lg md:rounded-4xl"
                     priority={false}
                 />
             </div>

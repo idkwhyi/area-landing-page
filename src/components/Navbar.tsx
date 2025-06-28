@@ -74,39 +74,41 @@ const Navbar = () => {
                 </button>
             </div>
 
-            {/* Mobile Version */}
+            {/* Mobile Version - Fixed */}
             <div className="md:hidden">
                 {/* Mobile Banner */}
                 <div
-                    className={`fixed top-0 left-0 right-0 z-50 bg-white  transition-transform duration-300 ${
+                    className={`fixed top-0 left-0 right-0 z-50 bg-white transition-transform duration-300 ${
                         showMobileBanner || isMenuOpen ? 'translate-y-0' : '-translate-y-full'
                     } ${isMenuOpen ? '' : 'shadow-sm rounded-br-2xl'}`}
                 >
-                    <div className="flex items-center justify-between px-6 py-4">
-                        <Link href="/" className="text-black dm-sans font-medium text-2xl">
+                    <div className="flex items-center justify-between px-4 py-4 max-w-full">
+                        <Link href="/" className="text-black dm-sans font-medium text-2xl flex-shrink-0">
                             Area
                         </Link>
 
                         <button
                             onClick={toggleMenu}
-                            className="w-8 h-8 flex items-center justify-center relative z-60"
+                            className="w-8 h-8 flex items-center justify-center relative flex-shrink-0 ml-2"
                             aria-label="Toggle menu"
                         >
-                            <span
-                                className={`absolute left-1/2 w-6 h-0.5 bg-black transition-all duration-300 transform -translate-x-1/2 ${
-                                    isMenuOpen ? 'rotate-45 top-1/2' : 'top-2'
-                                }`}
-                            ></span>
-                            <span
-                                className={`absolute left-1/2 w-6 h-0.5 bg-black transition-all duration-300 transform -translate-x-1/2 ${
-                                    isMenuOpen ? 'opacity-0' : 'opacity-100 top-1/2'
-                                }`}
-                            ></span>
-                            <span
-                                className={`absolute left-1/2 w-6 h-0.5 bg-black transition-all duration-300 transform -translate-x-1/2 ${
-                                    isMenuOpen ? '-rotate-45 top-1/2' : 'top-[2px]'
-                                }`}
-                            ></span>
+                            <div className="w-6 h-6 relative">
+                                <span
+                                    className={`absolute left-0 w-6 h-0.5 bg-black transition-all duration-300 transform ${
+                                        isMenuOpen ? 'rotate-45 top-2.5' : 'top-1'
+                                    }`}
+                                ></span>
+                                <span
+                                    className={`absolute left-0 w-6 h-0.5 bg-black transition-all duration-300 transform ${
+                                        isMenuOpen ? 'opacity-0' : 'opacity-100 top-2.5'
+                                    }`}
+                                ></span>
+                                <span
+                                    className={`absolute left-0 w-6 h-0.5 bg-black transition-all duration-300 transform ${
+                                        isMenuOpen ? '-rotate-45 top-2.5' : 'top-4'
+                                    }`}
+                                ></span>
+                            </div>
                         </button>
                     </div>
                 </div>
@@ -119,9 +121,9 @@ const Navbar = () => {
                             : 'opacity-0 pointer-events-none'
                     }`}
                 >
-                    <div className="pt-20 px-6">
+                    <div className="pt-20 px-4">
                         <nav>
-                            <ul className="">
+                            <ul>
                                 {menuItems.map((item, index) => (
                                     <li
                                         key={item}
@@ -138,7 +140,7 @@ const Navbar = () => {
                                     >
                                         <a
                                             href="#"
-                                            className="block text-sm font-bold  text-black py-3 hover:text-secondary-text transition-colors"
+                                            className="block text-sm font-bold text-black py-3 hover:text-secondary-text transition-colors"
                                             onClick={toggleMenu}
                                         >
                                             {item}

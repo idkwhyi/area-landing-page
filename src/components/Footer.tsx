@@ -10,24 +10,27 @@ const Footer = () => {
                     <Link href={'#benefits'}>Benefits</Link>
                 </li>
                 <li>
-                    <Link href={''}>Specification</Link>
+                    <Link href={'#specification'}>Specification</Link>
                 </li>
                 <li>
-                    <Link href={''}>How-to</Link>
+                    <Link href={'#how-to'}>How-to</Link>
                 </li>
             </ul>
-            <div className="w-[95%] h-fit roboto-mono flex items-center justify-between">
-                <div className="text-sm ">
-                    <Image
-                        loading="lazy"
-                        src="/_assets/v9/090b80a21b62ba18e35a0eff8aff6562be1d8d0e.svg"
-                        alt="Human footer logo"
-                        fill
-                        className="css-9j6u1t css-8zr56v"
-                        ></Image>
-                    <p className="text-sm text-footer-text">© Area. 2025</p>
+            <div className="w-[95%] h-fit roboto-mono flex items-end justify-between">
+                <div className="flex flex-row items-end gap-10">
+                    <div className="relative w-8 h-16">
+                        <Image
+                            src="/images/human_logo.svg"
+                            alt="Human footer logo"
+                            fill
+                            className="object-contain"
+                            loading="lazy"
+                            priority={false}
+                        />
+                    </div>
+                    <p className="text-xs text-footer-text">© Area. 2025</p>
                 </div>
-                <p className="text-sm text-footer-text">All Rights Reserved</p>
+                <p className="text-xs text-footer-text w-fit h-fit ">All Rights Reserved</p>
             </div>
         </footer>
     )

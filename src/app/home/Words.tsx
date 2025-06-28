@@ -1,8 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
+import { scrollTriggerAnimation, initializeAnimationClasses } from '../lib/animations'
 
 const Words = () => {
-    const list_style = 'w-[95%] md:w-[20%] h-fit flex flex-col items-start justify-center gap-4'
+    useEffect(() => {
+        initializeAnimationClasses()
+        scrollTriggerAnimation('.words-animate-on-scroll-up', 'slideUp')
+        scrollTriggerAnimation('.words-animate-on-scroll-fade', 'fadeIn')
+    }, [])
+
+    const list_style = 'w-[95%] md:w-[20%] h-fit flex flex-col items-start justify-center gap-4 words-animate-on-scroll-up animate-slide-up-initial'
     const p_title = 'crimson-regular text-lg'
     const p_class = 'w-full dm-sans text-secondary-text'
 
@@ -50,7 +58,7 @@ const Words = () => {
                 </li>
             </ul>
 
-            <div className="w-[95%] mt-8">
+            <div className="w-[95%] mt-8 words-animate-on-scroll-fade animate-fade-in-initial">
                 <Image
                     src="/images/mountain.png"
                     alt="Mountain image"

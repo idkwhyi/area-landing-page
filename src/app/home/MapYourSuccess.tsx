@@ -64,8 +64,7 @@ const MapYourSuccess = () => {
                     height={600}
                     sizes="(max-width: 768px) 95vw, 95vw"
                     className="w-full h-[400px] sm:h-[500px] md:h-auto object-cover rounded-lg md:rounded-4xl"
-                    priority={false}
-                    loading="lazy"
+                    priority={true}
                 />
             </div>
         </div>

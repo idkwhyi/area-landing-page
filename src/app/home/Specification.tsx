@@ -52,22 +52,22 @@ const Specification = () => {
                                 <h4 className="text-center dm-sans font-medium text-2xl border-b border-thirdary-text py-8">
                                     Area Pro
                                 </h4>
-                                <SpecificationList benefit="Ultra-fast browsing" />
-                                <SpecificationList benefit="Advanced AI insights" />
-                                <SpecificationList benefit="Seamless integration" />
-                                <SpecificationList benefit="Advanced AI insights" />
-                                <SpecificationList benefit="Ultra-fast browsing" />
+                                <SpecificationList benefit="Priority customer support" />
+                                <SpecificationList benefit="Customizable dashboards" />
+                                <SpecificationList benefit="Team collaboration tools" />
+                                <SpecificationList benefit="Advanced security features" />
+                                <SpecificationList benefit="Extended API access" />
                                 <SpecificationList benefit="Full UTF-8 support" />
                             </div>
                             <div className="w-80 md:w-[300px] lg:w-[350px] border border-line rounded-r-lg md:rounded-lg md:border-l-0 flex-shrink-0 animate-on-scroll-right animate-slide-right-initial">
                                 <h4 className="text-center dm-sans font-medium text-2xl border-b border-thirdary-text py-8">
                                     Area Enterprise
                                 </h4>
-                                <SpecificationList benefit="Ultra-fast browsing" />
-                                <SpecificationList benefit="Advanced AI insights" />
-                                <SpecificationList benefit="Seamless integration" />
-                                <SpecificationList benefit="Advanced AI insights" />
-                                <SpecificationList benefit="Ultra-fast browsing" />
+                                <SpecificationList benefit="Dedicated account manager" />
+                                <SpecificationList benefit="Enterprise-grade security" />
+                                <SpecificationList benefit="Custom integrations" />
+                                <SpecificationList benefit="Advanced analytics & reporting" />
+                                <SpecificationList benefit="SLA & compliance support" />
                                 <SpecificationList benefit="Full UTF-8 support" />
                             </div>
                         </div>

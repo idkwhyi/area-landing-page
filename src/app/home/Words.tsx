@@ -7,7 +7,8 @@ const Words = () => {
     const p_class = 'w-full dm-sans text-secondary-text'
 
     return (
-        <div className="w-full h-fit flex items-center justify-center py-10 gap-12 ">
+        <div className="w-full h-fit flex flex-col items-center justify-center py-10 gap-12">
+            {/* Existing list section */}
             <ul className="w-full md:w-[95%] h-fit flex items-center justify-between flex-col md:flex-row gap-12 md:gap-0">
                 <li className={list_style}>
                     <Image src={'/images/cable.png'} alt="insight image" width={30} height={30} />
@@ -47,6 +48,17 @@ const Words = () => {
                     </p>
                 </li>
             </ul>
+
+            <div className="w-full md:w-[95%] mt-8">
+                <Image
+                    src="/images/mountain.png"
+                    alt="Mountatin image"
+                    width={1200}
+                    height={600}
+                    className="w-full h-auto object-cover rounded-4xl"
+                    priority={false}
+                />
+            </div>
         </div>
     )
 }

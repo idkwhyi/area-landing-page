@@ -46,7 +46,7 @@ const Navbar = () => {
     return (
         <>
             {/* Desktop Version - unchanged */}
-            <div className="hidden md:flex w-full items-center justify-between px-10 py-5 relative">
+            <div className="hidden md:flex w-full max-w-screen items-center justify-between px-10 py-5 relative">
                 <Link href="/" className="text-black dm-sans font-medium text-3xl">
                     Area
                 </Link>

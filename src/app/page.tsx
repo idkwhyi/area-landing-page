@@ -10,7 +10,7 @@ import MapYourSuccess from './home/MapYourSuccess'
 
 export default function Home() {
     return (
-        <div className="w-full flex flex-col items-start justify-center min-h-screen bg-white">
+        <div className="w-full max-w-screen flex flex-col items-start justify-center min-h-screen bg-white">
             <Navbar />
             <br />
             <Hero />

@@ -35,7 +35,10 @@
     font-weight: 400;
 }
 
-html {
+html, body {
+    margin: 0;
+    width: 100vw;
+    box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
 }

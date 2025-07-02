@@ -15,7 +15,7 @@ const Words = () => {
     const p_class = 'w-full dm-sans text-secondary-text'
 
     return (
-        <div className="w-full h-fit flex flex-col items-center justify-center py-10 gap-12">
+        <div className="w-full h-fit flex flex-col items-center justify-center py-10 gap-12 overflow-x-auto">
             {/* Existing list section */}
             <ul className="w-[95%] h-fit flex items-center justify-between flex-col md:flex-row gap-12 md:gap-0">
                 <li className={list_style}>

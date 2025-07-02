@@ -12,8 +12,7 @@
     --color-thirdary-text: rgb(146, 146, 146);
     --color-icon-primary: rgb(150, 150, 150);
     --color-line: rgb(233, 233, 233);
-    --color-footer-text: rgb(72, 92, 17)
-;
+    --color-footer-text: rgb(72, 92, 17);
 }
 @font-face {
     font-family: 'DM_Sans';

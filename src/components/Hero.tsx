@@ -46,7 +46,7 @@ const Hero = () => {
                 {/* Mobile */}
                 <div
                     ref={mobileImgRef}
-                    className="w-75 md:hidden relative z-10 flex-shrink-0 -mx-20 animate-slide-up-initial"
+                    className="w-full md:hidden relative z-10 flex-shrink-0 animate-slide-up-initial"
                     style={{ opacity: 0 }}
                 >
                     <Image

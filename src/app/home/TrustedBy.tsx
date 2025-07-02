@@ -11,7 +11,7 @@ const TrustedBy = () => {
     }, [])
 
     return (
-        <div className="w-full flex flex-col items-center justify-center py-10 gap-12">
+        <div className="w-full flex flex-col items-center justify-center py-10 gap-12 overflow-x-auto">
             <h2 className="dm-sans text-secondary-text text-md trustedby-animate-on-scroll-fade animate-fade-in-initial">
                 Trusted by:
             </h2>

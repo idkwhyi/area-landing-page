@@ -46,7 +46,7 @@ const Navbar = () => {
     return (
         <>
             {/* Desktop Version - unchanged */}
-            <div className="hidden md:flex w-full max-w-screen items-center justify-between px-10 py-5 relative">
+            <div className="hidden md:flex w-full max-w-screen-xl mx-auto items-center justify-between px-10 py-5 relative">
                 <Link href="/" className="text-black dm-sans font-medium text-3xl">
                     Area
                 </Link>
@@ -78,7 +78,7 @@ const Navbar = () => {
             <div className="md:hidden">
                 {/* Mobile Banner */}
                 <div
-                    className={`fixed top-0 left-0 right-0 z-50 bg-white transition-transform duration-300 ${
+                    className={`fixed top-0 left-0 right-0 z-50 bg-white w-full transition-transform duration-300 ${
                         showMobileBanner || isMenuOpen ? 'translate-y-0' : '-translate-y-full'
                     } ${isMenuOpen ? '' : 'shadow-sm rounded-br-2xl'}`}
                 >
